@@ -13,11 +13,12 @@
 
         :root {
             --primary: #2c3e50;
-            --accent: #e74c3c;
+            --accent: #8A1359;
             --light: #ecf0f1;
             --dark: #1a252f;
             --text: #333;
             --gray: #7f8c8d;
+            --citrine: #b8c24e;
         }
 
         body {
@@ -157,9 +158,9 @@
         }
 
         .btn-primary:hover {
-            background: #c0392b;
+            background: #6d0f46;
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
+            box-shadow: 0 10px 25px rgba(138, 19, 89, 0.3);
         }
 
         .btn-secondary {
@@ -318,10 +319,10 @@
         }
 
         .contact-card {
-            background: #6b7c59;
+            background: var(--citrine);
             padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 5px 30px rgba(107, 124, 89, 0.3);
+            box-shadow: 0 5px 30px rgba(184, 194, 78, 0.3);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
             color: white;
@@ -329,8 +330,8 @@
 
         .contact-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(107, 124, 89, 0.4);
-            background: #5a6a4a;
+            box-shadow: 0 10px 40px rgba(184, 194, 78, 0.4);
+            background: #a8b23e;
         }
 
         .contact-icon {
@@ -356,6 +357,162 @@
         .contact-card a:hover {
             opacity: 1;
             text-decoration: underline;
+        }
+
+        /* Newsletter Section */
+        .newsletter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .newsletter-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .newsletter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        .newsletter-header {
+            background: var(--citrine);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .newsletter-month {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .newsletter-year {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .newsletter-content {
+            padding: 1.5rem;
+        }
+
+        .newsletter-description {
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-link {
+            display: block;
+            text-align: center;
+            padding: 0.75rem 1.5rem;
+            background: var(--light);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .newsletter-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Password Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 15% auto;
+            padding: 3rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 450px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .modal-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .modal-content p {
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .modal-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light);
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .modal-input:focus {
+            outline: none;
+            border-color: var(--citrine);
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .modal-btn-submit {
+            background: var(--citrine);
+            color: white;
+        }
+
+        .modal-btn-submit:hover {
+            background: #a8b23e;
+        }
+
+        .modal-btn-cancel {
+            background: var(--light);
+            color: var(--text);
+        }
+
+        .modal-btn-cancel:hover {
+            background: #d5d8dc;
+        }
+
+        .error-message {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            display: none;
         }
 
         /* Footer */
@@ -439,6 +596,7 @@
             <li><a href="#research" class="nav-link" onclick="showSection('research')">Research</a></li>
             <li><a href="#about" class="nav-link" onclick="showSection('about')">About</a></li>
             <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#newsletter" class="nav-link" onclick="showSection('newsletter')">Newsletter</a></li>
         </ul>
     </nav>
 
@@ -451,13 +609,14 @@
             </h1>
             <p class="subtitle">Economist</p>
             <p class="hero-description">
-                Research interests in inflation dynamics and applied microeconometrics, 
-                focusing on price-setting behavior, cost pass-through, and the role of 
-                sectoral linkages in shaping inflation outcomes.
+                So far, my work in research has focused on price-setting behavior, 
+                cost pass-through, and the role of sectoral linkages in shaping 
+                inflation outcomes.
             </p>
             <div class="cta-buttons">
                 <a href="#research" class="btn btn-primary" onclick="showSection('research')">View Research</a>
                 <a href="CV_Regina_Briseno.pdf" class="btn btn-secondary" download>Download CV</a>
+                <a href="https://maps.app.goo.gl/E9v72a3dDvr8nFpT7?g_st=i" class="btn btn-secondary" target="_blank">When in CDMX</a>
             </div>
         </div>
     </section>
@@ -490,20 +649,24 @@
             <!-- Work in Progress 1 -->
             <div class="research-card">
                 <span class="research-type">Work in Progress</span>
-                <h3 class="research-title">Industry-specific cost indices to monitor pressures on inflation</h3>
+                <h3 class="research-title">Industry-Specific Cost Indices to Monitor Pressures on Inflation</h3>
                 <p class="research-authors">with A. Espinoza, V. López, and M. J. Orraca</p>
                 <p class="research-description">
-                    Measuring cost pressures is important to inform policy decisions. We propose a method to construct industry-specific cost indices using I-O tables and estimate these for the most disaggregated level of the industrial classification in Mexico. By linking cost indices at the industry level with each item in the CPI basket in Mexico,we show that these are a powerful tool to illustrate how cost pressures have evolved over time, to analyze the sources of cost pressures on consumer prices in Mexico at different points in time, and particularly for understanding the inflationary surge in the aftermath of the COVID-19 pandemic. Finally, we show that cost indices have predictive power over inflation, despite pass-through being incomplete and lagged. This illustrates their usefulness to monitor the risks to inflation.
+                    This project constructs industry-level cost indices using input–output tables to disentangle 
+                    the sources of inflationary pressures in Mexico. The indices are designed to separate 
+                    cost-driven pressures from demand-driven dynamics and to improve monitoring of inflation risks.
                 </p>
             </div>
 
             <!-- Work in Progress 2 -->
             <div class="research-card">
                 <span class="research-type">Work in Progress</span>
-                <h3 class="research-title">Producer Price Index inflation variance transmission within the manufacturing sector of Mexico, the US and Canada</h3>
+                <h3 class="research-title">Producer Price Index Inflation Variance Transmission within Manufacturing Sectors</h3>
                 <p class="research-authors">with L. Arango-Castillo and M. J. Orraca</p>
                 <p class="research-description">
-                    We study the degree to which industries at different stages of the production process in Mexico, the United States, and Canada transmit inflation variance to industries in other stages and countries within the region. We use the Diebold-Yilmaz framework to calculate the connectedness of annual producer price inflation in the manufacturing industries from 2005 to 2024. We find that during the period of analysis, on average, 69.3\% of the inflation variance within these industries may be explained by shocks to industries in other stages or countries within the region. Using aggregate directional connectedness measures and descriptive evidence of trade flows, we argue that this can be rationalized by integrated production networks and large trade flows within the region. The results highlight that economic integration may expose countries to the variability of inflation in other countries.
+                    This project studies the transmission of PPI inflation variance across manufacturing sectors 
+                    in Mexico, the United States, and Canada, focusing on cross-sectoral and cross-country spillovers 
+                    arising from input–output linkages and regional production networks.
                 </p>
             </div>
 
@@ -513,16 +676,28 @@
                 <h3 class="research-title">Asymmetric Pass-Through and Competition in Isolated Mexican Gasoline Markets</h3>
                 <p class="research-authors">ITAM</p>
                 <p class="research-description">
-                    The Mexican gasoline market has undergone significant transformations in recent years, transitioning from a regime of fixed prices to one of
-liberalization. My work explores the possible asymmetry of the response of retail prices to cost fluctuations and examines whether the degree of
-competition influences the extent and speed of pass-through over a long period following deregulation. My analysis focuses on regular gasoline,
-premium gasoline, and diesel, using station-level data. I construct a novel measure of competition specific to isolated gasoline markets in
-Mexico. Using an error-correction flexible lag-adjustment model, the results reveal a clear rockets and feathers pricing pattern for regular and
-premium gasoline: prices tend to rise more quickly and to a larger degree in response to cost increases, but fall more slowly when costs decline.
-This asymmetric pattern is present across different levels of competition. Additionally, I find that prices generally respond quickly to both cost
-increases and decreases across all fuel types, and continue to rise even after the full pass-through of a cost increase has occurred. I do not find a
-consistent relationship between competition levels and pricing dynamics.
+                    This thesis examines retail gasoline pricing in Mexico following market deregulation. I 
+                    construct a novel measure of local competition in geographically isolated markets and document 
+                    asymmetric cost pass-through, with stronger price responses to cost increases than to decreases.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="section-hidden">
+        <h2 class="section-title">Newsletter</h2>
+        
+        <div class="newsletter-grid">
+            <!-- February 2026 -->
+            <div class="newsletter-card">
+                <div class="newsletter-header">
+                    <div class="newsletter-month">February</div>
+                    <div class="newsletter-year">2026</div>
+                </div>
+                <div class="newsletter-content">
+                    <a href="#" class="newsletter-link" onclick="requestPassword('newsletters/newsletter_feb_2026.pdf'); return false;">Download PDF</a>
+                </div>
             </div>
         </div>
     </section>
@@ -581,12 +756,79 @@ consistent relationship between competition levels and pricing dynamics.
         </div>
     </section>
 
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h3>🔒 Protected Newsletter</h3>
+            <p>Please enter the password to download this newsletter</p>
+            <input type="password" id="passwordInput" class="modal-input" placeholder="Enter password">
+            <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn modal-btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="modal-btn modal-btn-submit" onclick="checkPassword()">Download</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Regina Briseño. All rights reserved.</p>
     </footer>
 
     <script>
+        // Password protection for newsletters
+        const NEWSLETTER_PASSWORD = "research2025"; // Change this to your desired password
+        let currentNewsletterUrl = "";
+
+        function requestPassword(url) {
+            currentNewsletterUrl = url;
+            document.getElementById('passwordModal').style.display = 'block';
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('errorMessage').style.display = 'none';
+            document.getElementById('passwordInput').focus();
+        }
+
+        function closeModal() {
+            document.getElementById('passwordModal').style.display = 'none';
+            currentNewsletterUrl = "";
+        }
+
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            if (input === NEWSLETTER_PASSWORD) {
+                // Correct password - download the file
+                const link = document.createElement('a');
+                link.href = currentNewsletterUrl;
+                link.download = currentNewsletterUrl.split('/').pop();
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                closeModal();
+            } else {
+                // Wrong password
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordInput').focus();
+            }
+        }
+
+        // Allow Enter key to submit password
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPassword();
+                }
+            });
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('passwordModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
         // Navigation
         function showSection(sectionId) {
             // Hide all sections
