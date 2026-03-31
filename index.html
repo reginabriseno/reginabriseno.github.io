@@ -696,7 +696,7 @@
                     <div class="newsletter-year">2026</div>
                 </div>
                 <div class="newsletter-content">
-                    <a href="#" class="newsletter-link" onclick="requestPassword('newsletters/newsletter_feb_2026.pdf'); return false;">Download PDF</a>
+                    <a href="newsletters/newsletter_feb_2026.pdf" class="newsletter-link" download>Download PDF</a>
                 </div>
             </div>
 
@@ -707,7 +707,7 @@
                     <div class="newsletter-year">2026</div>
                 </div>
                 <div class="newsletter-content">
-                    <a href="#" class="newsletter-link" onclick="requestPassword('newsletters/newsletter_mar_2026.pdf'); return false;">Download PDF</a>
+                    <a href="newsletters/newsletter_march_2026.pdf" class="newsletter-link" download>Download PDF</a>
                 </div>
             </div>
         </div>
@@ -767,20 +767,6 @@
         </div>
     </section>
 
-    <!-- Password Modal -->
-    <div id="passwordModal" class="modal">
-        <div class="modal-content">
-            <h3>🔒 Protected Newsletter</h3>
-            <p>Please enter the password to download this newsletter</p>
-            <input type="password" id="passwordInput" class="modal-input" placeholder="Enter password">
-            <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
-            <div class="modal-buttons">
-                <button class="modal-btn modal-btn-cancel" onclick="closeModal()">Cancel</button>
-                <button class="modal-btn modal-btn-submit" onclick="checkPassword()">Download</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Regina Briseño. All rights reserved.</p>
@@ -788,7 +774,7 @@
 
     <script>
         // Password protection for newsletters
-        const NEWSLETTER_PASSWORD = "CloseFriends"; // Change this to your desired password
+        const NEWSLETTER_PASSWORD = "research2025"; // Change this to your desired password
         let currentNewsletterUrl = "";
 
         function requestPassword(url) {
