@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -46,7 +45,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary);
+            color: #2c3e50;
             text-decoration: none;
             letter-spacing: -0.5px;
         }
@@ -58,7 +57,7 @@
         }
 
         .nav-links a {
-            color: var(--text);
+            color: #333;
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.3s;
@@ -66,7 +65,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent);
+            color: #8A1359;
         }
 
         .nav-links a.active::after {
@@ -76,10 +75,9 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background: var(--accent);
+            background: #8A1359;
         }
 
-        /* Mobile menu */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -90,18 +88,16 @@
         .menu-toggle span {
             width: 25px;
             height: 2px;
-            background: var(--primary);
+            background: #2c3e50;
             transition: 0.3s;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding: 100px 10% 0 10%;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            margin-top: 0;
         }
 
         .hero-content {
@@ -112,7 +108,7 @@
             font-size: 4.5rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            color: var(--dark);
+            color: #1a252f;
             font-weight: 300;
         }
 
@@ -123,7 +119,7 @@
 
         .hero .subtitle {
             font-size: 1.5rem;
-            color: var(--gray);
+            color: #7f8c8d;
             margin-bottom: 2rem;
             font-style: italic;
         }
@@ -174,7 +170,6 @@
             color: white;
         }
 
-        /* Content Sections */
         section {
             padding: 6rem 5%;
             max-width: 1400px;
@@ -188,18 +183,17 @@
         .section-title {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: var(--dark);
+            color: #1a252f;
             font-weight: 300;
         }
 
         .section-subtitle {
             font-size: 1.2rem;
-            color: var(--gray);
+            color: #7f8c8d;
             margin-bottom: 4rem;
             font-style: italic;
         }
 
-        /* Research Cards */
         .research-grid {
             display: grid;
             gap: 3rem;
@@ -222,8 +216,8 @@
         .research-type {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: var(--light);
-            color: var(--primary);
+            background: #ecf0f1;
+            color: #2c3e50;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
@@ -233,12 +227,12 @@
         .research-title {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: var(--dark);
+            color: #1a252f;
             font-weight: 600;
         }
 
         .research-authors {
-            color: var(--gray);
+            color: #7f8c8d;
             margin-bottom: 1rem;
             font-style: italic;
         }
@@ -268,7 +262,6 @@
             gap: 1rem;
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -286,7 +279,7 @@
         }
 
         .credentials {
-            background: var(--light);
+            background: #ecf0f1;
             padding: 2rem;
             border-radius: 10px;
             margin-top: 2rem;
@@ -294,7 +287,7 @@
 
         .credentials h3 {
             margin-bottom: 1rem;
-            color: var(--primary);
+            color: #2c3e50;
         }
 
         .credentials ul {
@@ -310,7 +303,6 @@
             border-bottom: none;
         }
 
-        /* Contact Section */
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -325,7 +317,6 @@
             box-shadow: 0 5px 30px rgba(184, 194, 78, 0.3);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
-            color: white;
         }
 
         .contact-card:hover {
@@ -337,7 +328,6 @@
         .contact-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
         .contact-card h3 {
@@ -350,16 +340,12 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
-            opacity: 0.95;
-            transition: opacity 0.3s;
         }
 
         .contact-card a:hover {
-            opacity: 1;
             text-decoration: underline;
         }
 
-        /* Newsletter Section */
         .newsletter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -382,7 +368,6 @@
 
         .newsletter-header {
             background: #b8c24e;
-            color: white;
             padding: 1.5rem;
             text-align: center;
         }
@@ -395,27 +380,21 @@
         }
 
         .newsletter-year {
-            opacity: 0.9;
             font-size: 0.95rem;
             color: white;
+            opacity: 0.9;
         }
 
         .newsletter-content {
             padding: 1.5rem;
         }
 
-        .newsletter-description {
-            color: var(--gray);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
         .newsletter-link {
             display: block;
             text-align: center;
             padding: 0.75rem 1.5rem;
-            background: var(--light);
-            color: var(--primary);
+            background: #ecf0f1;
+            color: #2c3e50;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
@@ -427,7 +406,6 @@
             color: white;
         }
 
-        /* Footer */
         footer {
             background: #1a252f;
             color: white;
@@ -439,11 +417,8 @@
             opacity: 0.8;
         }
 
-        /* Responsive */
         @media (max-width: 968px) {
-            .menu-toggle {
-                display: flex;
-            }
+            .menu-toggle { display: flex; }
 
             .nav-links {
                 position: fixed;
@@ -457,51 +432,26 @@
                 transition: right 0.3s;
             }
 
-            .nav-links.active {
-                right: 0;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-            }
+            .nav-links.active { right: 0; }
+            .hero h1 { font-size: 3rem; }
+            .hero .subtitle { font-size: 1.2rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .section-title { font-size: 2.5rem; }
         }
 
         @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            .cta-buttons { flex-direction: column; }
+            .btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
     <nav>
         <a href="#" class="logo">Regina Briseño</a>
         <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
         <ul class="nav-links" id="navLinks">
             <li><a href="javascript:void(0)" class="nav-link active" onclick="showSection('home')">Home</a></li>
@@ -512,7 +462,6 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>
@@ -521,8 +470,8 @@
             </h1>
             <p class="subtitle">Economist</p>
             <p class="hero-description">
-                So far, my work in research has focused on price-setting behavior, 
-                cost pass-through, and the role of sectoral linkages in shaping 
+                So far, my work in research has focused on price-setting behavior,
+                cost pass-through, and the role of sectoral linkages in shaping
                 inflation outcomes.
             </p>
             <div class="cta-buttons">
@@ -533,75 +482,66 @@
         </div>
     </section>
 
-    <!-- Research Section -->
     <section id="research" class="section-hidden">
         <h2 class="section-title">Research</h2>
         <p class="section-subtitle">Publications and ongoing work</p>
-
         <div class="research-grid">
-            <!-- Published Working Paper -->
+
             <div class="research-card">
                 <span class="research-type">Working Paper</span>
                 <h3 class="research-title">Inflation Volatility across Advanced and Emerging Economies during the COVID-19 Pandemic</h3>
                 <p class="research-authors">with L. Arango-Castillo and M. J. Orraca</p>
                 <p class="research-venue">Banco de México Working Paper No. 2025-13</p>
                 <p class="research-description">
-                    This paper studies the relationship between inflation levels and inflation volatility during 
-                    the COVID-19 period using data from over sixty economies. Using GARCH-based specifications, 
-                    we show that inflation volatility is strongly associated with commodity price shocks and 
+                    This paper studies the relationship between inflation levels and inflation volatility during
+                    the COVID-19 period using data from over sixty economies. Using GARCH-based specifications,
+                    we show that inflation volatility is strongly associated with commodity price shocks and
                     periods of heightened global uncertainty.
                 </p>
-                <a href="https://www.banxico.org.mx/publications-and-press/banco-de-mexico-working-papers/%7BA878E916-1E6B-D82B-D52D-784A84C1FBBA%7D.pdf" 
-                   target="_blank" 
-                   class="research-link">
-                    Read Paper →
-                </a>
+                <a href="https://www.banxico.org.mx/publications-and-press/banco-de-mexico-working-papers/%7BA878E916-1E6B-D82B-D52D-784A84C1FBBA%7D.pdf"
+                   target="_blank" class="research-link">Read Paper →</a>
             </div>
 
-            <!-- Work in Progress 1 -->
             <div class="research-card">
                 <span class="research-type">Work in Progress</span>
                 <h3 class="research-title">Industry-Specific Cost Indices to Monitor Pressures on Inflation</h3>
                 <p class="research-authors">with A. Espinoza, V. López, and M. J. Orraca</p>
                 <p class="research-description">
-                    This project constructs industry-level cost indices using input–output tables to disentangle 
-                    the sources of inflationary pressures in Mexico. The indices are designed to separate 
+                    This project constructs industry-level cost indices using input–output tables to disentangle
+                    the sources of inflationary pressures in Mexico. The indices are designed to separate
                     cost-driven pressures from demand-driven dynamics and to improve monitoring of inflation risks.
                 </p>
             </div>
 
-            <!-- Work in Progress 2 -->
             <div class="research-card">
                 <span class="research-type">Work in Progress</span>
                 <h3 class="research-title">Producer Price Index Inflation Variance Transmission within Manufacturing Sectors</h3>
                 <p class="research-authors">with L. Arango-Castillo and M. J. Orraca</p>
                 <p class="research-description">
-                    This project studies the transmission of PPI inflation variance across manufacturing sectors 
-                    in Mexico, the United States, and Canada, focusing on cross-sectoral and cross-country spillovers 
+                    This project studies the transmission of PPI inflation variance across manufacturing sectors
+                    in Mexico, the United States, and Canada, focusing on cross-sectoral and cross-country spillovers
                     arising from input–output linkages and regional production networks.
                 </p>
             </div>
 
-            <!-- Undergraduate Thesis -->
             <div class="research-card">
                 <span class="research-type">Undergraduate Thesis</span>
                 <h3 class="research-title">Asymmetric Pass-Through and Competition in Isolated Mexican Gasoline Markets</h3>
                 <p class="research-authors">ITAM</p>
                 <p class="research-description">
-                    This thesis examines retail gasoline pricing in Mexico following market deregulation. I 
-                    construct a novel measure of local competition in geographically isolated markets and document 
+                    This thesis examines retail gasoline pricing in Mexico following market deregulation. I
+                    construct a novel measure of local competition in geographically isolated markets and document
                     asymmetric cost pass-through, with stronger price responses to cost increases than to decreases.
                 </p>
             </div>
+
         </div>
     </section>
 
-    <!-- Newsletter Section -->
     <section id="newsletter" class="section-hidden">
         <h2 class="section-title">Newsletter</h2>
-        
         <div class="newsletter-grid">
-            <!-- May 2026 -->
+
             <div class="newsletter-card">
                 <div class="newsletter-header">
                     <div class="newsletter-month">May</div>
@@ -612,7 +552,6 @@
                 </div>
             </div>
 
-            <!-- April 2026 -->
             <div class="newsletter-card">
                 <div class="newsletter-header">
                     <div class="newsletter-month">April</div>
@@ -623,18 +562,16 @@
                 </div>
             </div>
 
-            <!-- March 2026 -->
             <div class="newsletter-card">
                 <div class="newsletter-header">
                     <div class="newsletter-month">March</div>
                     <div class="newsletter-year">2026</div>
                 </div>
                 <div class="newsletter-content">
-                    <a href="newsletters/newsletter_march_2026.pdf" class="newsletter-link" download>Download PDF</a>
+                    <a href="newsletters/newsletter_mar_2026.pdf" class="newsletter-link" download>Download PDF</a>
                 </div>
             </div>
 
-            <!-- February 2026 -->
             <div class="newsletter-card">
                 <div class="newsletter-header">
                     <div class="newsletter-month">February</div>
@@ -644,30 +581,28 @@
                     <a href="newsletters/newsletter_feb_2026.pdf" class="newsletter-link" download>Download PDF</a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section-hidden">
         <h2 class="section-title">About</h2>
         <p class="section-subtitle">Background and experience</p>
-        
         <div class="about-content">
             <div class="about-text">
                 <p>
-                    I am an economist with research interests in inflation dynamics and applied microeconometrics. 
-                    My work focuses on price-setting behavior, cost pass-through, and the role of sectoral linkages 
+                    I am an economist with research interests in inflation dynamics and applied microeconometrics.
+                    My work focuses on price-setting behavior, cost pass-through, and the role of sectoral linkages
                     in shaping inflation outcomes.
                 </p>
                 <p>
-                    I hold a B.A. in Economics from ITAM and have worked as an economist at the Directorate General 
+                    I hold a B.A. in Economics from ITAM and have worked as an economist at the Directorate General
                     of Economic Research at Banco de México. I am preparing to apply to PhD programs in Economics.
                 </p>
                 <div class="cta-buttons" style="margin-top: 2rem;">
                     <a href="CV_Regina_Briseno.pdf" class="btn btn-primary" download>Download CV</a>
                 </div>
             </div>
-            
             <div>
                 <div class="credentials">
                     <h3>Education</h3>
@@ -675,7 +610,6 @@
                         <li>B.A. in Economics, ITAM</li>
                     </ul>
                 </div>
-                
                 <div class="credentials">
                     <h3>Experience</h3>
                     <ul>
@@ -687,11 +621,9 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section-hidden">
         <h2 class="section-title">Get in Touch</h2>
         <p class="section-subtitle">Let's connect</p>
-        
         <div class="contact-grid">
             <div class="contact-card">
                 <div class="contact-icon">✉️</div>
@@ -701,31 +633,25 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Regina Briseño. All rights reserved.</p>
     </footer>
 
     <script>
-        // Navigation
         function showSection(sectionId) {
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
+            document.querySelectorAll('section').forEach(section => {
                 if (section.id === 'home') {
                     section.style.display = section.id === sectionId ? 'flex' : 'none';
                 } else {
                     section.classList.toggle('section-hidden', section.id !== sectionId);
                 }
             });
-
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
+            document.querySelectorAll('.nav-link').forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('onclick').includes(sectionId)) {
                     link.classList.add('active');
                 }
             });
-
             document.getElementById('navLinks').classList.remove('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -742,5 +668,6 @@
             }
         });
     </script>
+
 </body>
 </html>
