@@ -4,23 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regina Briseño | Economist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'DM Sans', sans-serif;
             line-height: 1.6;
             color: #1a1a1a;
             overflow-x: hidden;
-            background: #f0ede8;
+            background: #f5f2ed;
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 1.5rem;
@@ -30,11 +25,11 @@
             z-index: 1000;
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fraunces', serif;
             font-size: 1.3rem;
             font-weight: 900;
             color: #1a1a1a;
@@ -45,10 +40,9 @@
         .nav-pill {
             background: #3d2314;
             border-radius: 50px;
-            padding: 0.75rem 2rem;
+            padding: 0.75rem 1.5rem;
             display: flex;
-            gap: 0.5rem;
-            align-items: center;
+            gap: 0.25rem;
         }
 
         .nav-links {
@@ -73,7 +67,6 @@
             color: #3d2314;
         }
 
-        /* Mobile menu */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -91,25 +84,23 @@
             transition: 0.3s;
         }
 
-        /* Hero Section */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding: 120px 10% 4rem 10%;
-            background: #c8d4e0;
+            background: #f5d0e0;
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
+        .hero-content { max-width: 800px; }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fraunces', serif;
             font-size: 6rem;
             line-height: 1.0;
             margin-bottom: 1.5rem;
-            color: #1a1a1a;
+            color: #1a3a6b;
             font-weight: 900;
         }
 
@@ -120,10 +111,10 @@
 
         .hero .subtitle {
             font-size: 1.2rem;
-            color: #555;
+            color: #1a3a6b;
+            opacity: 0.7;
             margin-bottom: 1.5rem;
             font-style: italic;
-            font-family: 'DM Sans', sans-serif;
             font-weight: 300;
         }
 
@@ -132,7 +123,7 @@
             line-height: 1.8;
             margin-bottom: 3rem;
             max-width: 560px;
-            color: #333;
+            color: #2a3a5a;
         }
 
         .cta-buttons {
@@ -145,7 +136,7 @@
             padding: 0.9rem 2rem;
             border: none;
             border-radius: 50px;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-family: 'DM Sans', sans-serif;
             font-weight: 500;
             cursor: pointer;
@@ -154,40 +145,37 @@
             display: inline-block;
         }
 
-        .btn-primary {
-            background: #8A1359;
-            color: white;
+        .btn-dark {
+            background-color: #1a3a6b;
+            color: #f5d0e0;
         }
 
-        .btn-primary:hover {
-            background: #6d0f46;
+        .btn-dark:hover {
+            background-color: #0f2449;
             transform: translateY(-2px);
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: #1a1a1a;
-            border: 2px solid #1a1a1a;
+        .btn-citrine {
+            background-color: #b8c24e;
+            color: #1a3a6b;
         }
 
-        .btn-secondary:hover {
-            background: #1a1a1a;
-            color: #f0ede8;
+        .btn-citrine:hover {
+            background-color: #a0aa3a;
+            transform: translateY(-2px);
         }
 
-        /* Content Sections */
+        /* SECTIONS */
         section {
             padding: 6rem 8%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .section-hidden {
-            display: none;
-        }
+        .section-hidden { display: none; }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fraunces', serif;
             font-size: 3.5rem;
             margin-bottom: 0.75rem;
             color: #1a1a1a;
@@ -201,12 +189,8 @@
             font-style: italic;
         }
 
-        /* Research Cards */
-        .research-grid {
-            display: grid;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
+        /* RESEARCH */
+        .research-grid { display: grid; gap: 2rem; margin-bottom: 4rem; }
 
         .research-card {
             background: white;
@@ -224,8 +208,6 @@
         .research-type {
             display: inline-block;
             padding: 0.4rem 1rem;
-            background: #f0ede8;
-            color: #3d2314;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -234,8 +216,12 @@
             text-transform: uppercase;
         }
 
+        .type-working { background: #fff0e8; color: #b03d00; }
+        .type-progress { background: #eef5d8; color: #4a6a00; }
+        .type-thesis { background: #e0eaf8; color: #1a3a6b; }
+
         .research-title {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fraunces', serif;
             font-size: 1.5rem;
             margin-bottom: 0.75rem;
             color: #1a1a1a;
@@ -250,7 +236,7 @@
         }
 
         .research-venue {
-            color: #8A1359;
+            color: #E8530A;
             margin-bottom: 1.25rem;
             font-weight: 500;
             font-size: 0.95rem;
@@ -263,7 +249,7 @@
         }
 
         .research-link {
-            color: #8A1359;
+            color: #C1155A;
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
@@ -274,87 +260,7 @@
 
         .research-link:hover { gap: 1rem; }
 
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .about-text {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .about-text p { margin-bottom: 1.5rem; }
-
-        .credentials {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            margin-top: 1.5rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-        }
-
-        .credentials h3 {
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-        }
-
-        .credentials ul { list-style: none; }
-
-        .credentials li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #f0ede8;
-            font-size: 0.95rem;
-            color: #444;
-        }
-
-        .credentials li:last-child { border-bottom: none; }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-card {
-            background: #b8c24e;
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-4px);
-            background: #a8b23e;
-        }
-
-        .contact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-
-        .contact-card h3 {
-            margin-bottom: 0.5rem;
-            color: white;
-            font-size: 1.2rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .contact-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-card a:hover { text-decoration: underline; }
-
-        /* Newsletter Section */
+        /* NEWSLETTER */
         .newsletter-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -379,7 +285,7 @@
         }
 
         .newsletter-month {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fraunces', serif;
             font-size: 1.6rem;
             font-weight: 900;
             color: white;
@@ -407,47 +313,113 @@
             transition: background 0.3s, color 0.3s;
         }
 
-        .newsletter-link:hover {
-            background: #1a1a1a;
-            color: white;
+        .newsletter-link:hover { background: #1a1a1a; color: white; }
+
+        /* ABOUT */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
         }
 
-        /* Footer */
+        .about-text { font-size: 1.05rem; line-height: 1.8; color: #333; }
+        .about-text p { margin-bottom: 1.5rem; }
+
+        .credentials {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+        }
+
+        .credentials h3 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-family: 'Fraunces', serif;
+            font-size: 1.1rem;
+        }
+
+        .credentials ul { list-style: none; }
+
+        .credentials li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0ede8;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .credentials li:last-child { border-bottom: none; }
+
+        .btn-lilac {
+            background: #d4609c;
+            color: white;
+            margin-top: 1rem;
+        }
+
+        .btn-lilac:hover { background: #bb4a87; }
+
+        .tag-lilac {
+            display: inline-block;
+            background: #f5e8f5;
+            color: #8a2a8a;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 0.75rem;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: #b8c24e;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .contact-card:hover { transform: translateY(-4px); background: #a8b23e; }
+        .contact-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .contact-card h3 { margin-bottom: 0.5rem; color: white; font-size: 1.2rem; font-family: 'Fraunces', serif; }
+        .contact-card a { color: white; text-decoration: none; font-weight: 500; }
+        .contact-card a:hover { text-decoration: underline; }
+
+        /* FOOTER */
         footer {
             background: #1a1a1a;
-            color: #f0ede8;
+            color: #f5f2ed;
             text-align: center;
             padding: 2.5rem 5%;
             font-size: 0.9rem;
-            opacity: 0.9;
         }
 
-        /* Responsive */
+        /* RESPONSIVE */
         @media (max-width: 968px) {
             nav {
-                top: 0;
-                left: 0;
-                transform: none;
-                width: 100%;
-                background: #f0ede8;
-                padding: 1rem 5%;
+                top: 0; left: 0; transform: none; width: 100%;
+                background: #f5f2ed; padding: 1rem 5%;
                 justify-content: space-between;
-                border-radius: 0;
             }
-
             .nav-pill { display: none; }
-            .nav-pill.active { 
+            .nav-pill.active {
                 display: flex;
                 position: fixed;
-                top: 70px;
-                left: 5%;
-                right: 5%;
-                width: 90%;
+                top: 70px; left: 5%; right: 5%; width: 90%;
                 border-radius: 20px;
                 flex-direction: column;
                 padding: 1rem;
             }
-
             .nav-links { flex-direction: column; width: 100%; }
             .nav-links a { text-align: center; padding: 0.6rem; }
             .menu-toggle { display: flex; }
@@ -494,9 +466,9 @@
                 inflation outcomes.
             </p>
             <div class="cta-buttons">
-                <a href="javascript:void(0)" class="btn btn-primary" onclick="showSection('research')">View Research</a>
-                <a href="CV_Regina_Briseno.pdf" class="btn btn-secondary" download>Download CV</a>
-                <a href="https://maps.app.goo.gl/E9v72a3dDvr8nFpT7?g_st=i" class="btn btn-secondary" target="_blank">When in CDMX</a>
+                <a href="javascript:void(0)" class="btn btn-dark" onclick="showSection('research')">View Research</a>
+                <a href="CV_Regina_Briseno.pdf" class="btn btn-dark" download>Download CV</a>
+                <a href="https://maps.app.goo.gl/E9v72a3dDvr8nFpT7?g_st=i" class="btn btn-citrine" target="_blank">When in CDMX</a>
             </div>
         </div>
     </section>
@@ -507,7 +479,7 @@
         <div class="research-grid">
 
             <div class="research-card">
-                <span class="research-type">Working Paper</span>
+                <span class="research-type type-working">Working Paper</span>
                 <h3 class="research-title">Inflation Volatility across Advanced and Emerging Economies during the COVID-19 Pandemic</h3>
                 <p class="research-authors">with L. Arango-Castillo and M. J. Orraca</p>
                 <p class="research-venue">Banco de México Working Paper No. 2025-13</p>
@@ -522,7 +494,7 @@
             </div>
 
             <div class="research-card">
-                <span class="research-type">Work in Progress</span>
+                <span class="research-type type-progress">Work in Progress</span>
                 <h3 class="research-title">Industry-Specific Cost Indices to Monitor Pressures on Inflation</h3>
                 <p class="research-authors">with A. Espinoza, V. López, and M. J. Orraca</p>
                 <p class="research-description">
@@ -533,7 +505,7 @@
             </div>
 
             <div class="research-card">
-                <span class="research-type">Work in Progress</span>
+                <span class="research-type type-progress">Work in Progress</span>
                 <h3 class="research-title">Producer Price Index Inflation Variance Transmission within Manufacturing Sectors</h3>
                 <p class="research-authors">with L. Arango-Castillo and M. J. Orraca</p>
                 <p class="research-description">
@@ -544,7 +516,7 @@
             </div>
 
             <div class="research-card">
-                <span class="research-type">Undergraduate Thesis</span>
+                <span class="research-type type-thesis">Undergraduate Thesis</span>
                 <h3 class="research-title">Asymmetric Pass-Through and Competition in Isolated Mexican Gasoline Markets</h3>
                 <p class="research-authors">ITAM</p>
                 <p class="research-description">
@@ -626,16 +598,15 @@
                 </p>
                 <p>
                     I hold a B.A. in Economics from ITAM and have worked as an economist at the Directorate General
-                    of Economic Research at Banco de México. I am preparing to apply to PhD programs in Economics.
+                    of Economic Research at Banco de México. I am preparing to start a PhD in Economics at UC San Diego.
                 </p>
-                <div class="cta-buttons" style="margin-top: 2rem;">
-                    <a href="CV_Regina_Briseno.pdf" class="btn btn-primary" download>Download CV</a>
-                </div>
+                <a href="CV_Regina_Briseno.pdf" class="btn btn-lilac" download>Download CV</a>
             </div>
             <div>
                 <div class="credentials">
                     <h3>Education</h3>
                     <ul>
+                        <li>Ph.D. in Economics (incoming), UC San Diego</li>
                         <li>B.A. in Economics, ITAM</li>
                     </ul>
                 </div>
